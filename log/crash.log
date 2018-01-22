@@ -1,0 +1,40 @@
+2018-01-20 15:51:29 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Logger.Supervisor'}
+     Context:    child_terminated
+     Reason:     normal
+     Offender:   [{pid,<0.714.0>},{id,'Elixir.Logger.ErrorHandler'},{mfargs,{'Elixir.Logger.Watcher',start_link,[{error_logger,'Elixir.Logger.ErrorHandler',{true,false,500}}]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2018-01-20 15:51:29 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:Elixir.Supervisor.Default/1
+    pid: <0.793.0>
+    registered_name: []
+    exception exit: {{start_spec,{duplicate_child_name,'Elixir.Jorb.Fetcher'}},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,349}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.792.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.792.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 295
+  neighbours:
+2018-01-20 15:51:29 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.791.0>
+    registered_name: []
+    exception exit: {{{start_spec,{duplicate_child_name,'Elixir.Jorb.Fetcher'}},{'Elixir.Jorb.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,247}]}]}
+    ancestors: [<0.790.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.792.0>,normal}]
+    links: [<0.790.0>,<0.33.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 187
+  neighbours:
