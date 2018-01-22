@@ -1,21 +1,10 @@
 # JorbDemo
 
-**TODO: Add description**
+A simple application for demoing and benchmarking [Jorb](https://github.com/appcues/jorb)
 
-## Installation
+## Authorship & License
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `jorb_demo` to your list of dependencies in `mix.exs`:
+JorbDemo is copyright Appcues, 2018
 
-```elixir
-def deps do
-  [
-    {:jorb_demo, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/jorb_demo](https://hexdocs.pm/jorb_demo).
+JorbDemo is licensed under the MIT license
 
