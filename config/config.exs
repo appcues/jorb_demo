@@ -6,9 +6,11 @@ config :jorb_demo, queue_name: "demo_queue"
 
 config :jorb,
   application: :jorb_demo,
-  fetching_timeout: 1000,
+  fetching_timer: 1000,
   fetching_processes: 2,
   namespace: "Elixir.JorbDemo.Job"
+
+config :logger, level: :debug
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this

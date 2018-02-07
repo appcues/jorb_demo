@@ -1,4 +1,5 @@
 defmodule JorbDemo.Emitter do
+  require Logger
   use GenServer
 
   def start_link(opts) do
@@ -17,9 +18,9 @@ defmodule JorbDemo.Emitter do
   def handle_info(:emit_events, :ignored) do
     emit_events()
 
-    queue_name = Application.get_env(:jorb_demo, :queue_name)
-    ExAws.SQS.send_message(queue_name, :erlang.system_time(:milli_seconds))
+    JorbDemo.Job.perform_async(:erlang.system_time(:milli_seconds))
 
+    Logger.debug("Sent off an event to SQS")
     {:noreply, :ignored}
   end
 end

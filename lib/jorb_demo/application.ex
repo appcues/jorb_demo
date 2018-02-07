@@ -8,8 +8,7 @@ defmodule JorbDemo.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Starts a worker by calling: JorbDemo.Worker.start_link(arg)
-      # {JorbDemo.Worker, arg},
+      {JorbDemo.Emitter, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

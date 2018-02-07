@@ -7,5 +7,6 @@ defmodule JorbDemo.Job do
 
   def perform(params) do
     Logger.debug("Hello I am performing a job with params #{params}")
+    :ok
   end
 end
